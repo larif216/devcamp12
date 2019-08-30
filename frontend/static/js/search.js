@@ -1,7 +1,7 @@
 function getPrediction() {
     $(document).ready(function () {
         var selectedProd = $('#product').val();
-        var id = indexProd.findIndex(k=> k == selectedProd);
+        var id = indexProd.findIndex(k=> k == selectedProd) + 1;
         if (selectedProd == '') {
             return
         }

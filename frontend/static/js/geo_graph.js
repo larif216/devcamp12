@@ -1,5 +1,12 @@
 
 function geograph(product) {
+    var dataInput = [];
+    for (i = 0; i < product.region.length; i++) {
+        dataInput[i] = {
+            y: product.region[i].sum,
+            label: product.region[i].name
+        }
+    }
     $('.card').show();
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
@@ -11,13 +18,10 @@ function geograph(product) {
             type: "column",  
             showInLegend: true, 
             legendText: "Region",
-            dataPoints: [      
-                { y: 300878, label: "Sumatera Barat" },
-                { y: 266455,  label: "Kalimantan Utara" },
-                { y: 169709,  label: "Jawa Timur" }
-            ],
+            dataPoints: dataInput,
             click: function(e){
-                linegraph(namaProduct, e.dataPoint.label);
+                var selectedRegion = product.region.findIndex(k => k.name == e.dataPoint.label);
+                linegraph(product, selectedRegion);
             }
         }
     ]
