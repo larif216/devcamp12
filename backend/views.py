@@ -18,7 +18,7 @@ def getProductList(request):
         'product': [
             {
                 'key': product.id,
-                'name': product.name
+                'value': product.name
             }
             for product in Product.objects.all()
         ]
