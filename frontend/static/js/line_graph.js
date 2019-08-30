@@ -1,6 +1,5 @@
 
 function linegraph(product, idRegion){
-    console.log(idRegion)
     var region = product.region[idRegion];
     var starttgl = 20;
     var startbln =12;
@@ -63,7 +62,6 @@ function linegraph(product, idRegion){
             }
         }   
     }
-    console.log(region);
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
             text: "Prediksi Penjualan " + product.name + " di daerah " + region.name
