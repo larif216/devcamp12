@@ -5,3 +5,7 @@ input {
 .navbar {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
+
+html {
+    height: 100vh;
+}

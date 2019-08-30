@@ -1,5 +1,4 @@
-
-function linegraph(namapruduct, regional){
+function linegraph(namaProduct, region){
     var starttgl = 20;
     var startbln =12;
     var startthn = 2019;
@@ -65,7 +64,7 @@ function linegraph(namapruduct, regional){
 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "Prediksi Penjualan"
+            text: "Prediksi Penjualan"+ namaProduct + " di daerah " + region
         },
         axisX: {
             valueFormatString: "DD/MM/YYYY",
