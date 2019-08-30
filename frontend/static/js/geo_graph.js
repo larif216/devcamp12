@@ -1,11 +1,11 @@
 
-function geograph(namaProduct) {
-
+function geograph(product) {
+    $('.card').show();
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         theme: "light2", // "light1", "light2", "dark1", "dark2"
         title:{
-            text: "Prediksi Jumlah Permintaan "+namaProduct+" Berdasarkan Regional"
+            text: "Prediksi Jumlah Permintaan "+ product.name +" Berdasarkan Regional"
         },
         data: [{        
             type: "column",  
@@ -17,7 +17,7 @@ function geograph(namaProduct) {
                 { y: 169709,  label: "Jawa Timur" }
             ],
             click: function(e){
-                linegraph(e.label);
+                linegraph(namaProduct, e.dataPoint.label);
             }
         }
     ]
