@@ -7,7 +7,7 @@ function linegraph(product, idRegion){
     var dataInputMerk = region.time.merk;
     var dataInputKategori = region.time.category;
     var tglskrg = starttgl;
-    var blnskrg = startbln-1;
+    var blnskrg = startbln;
     var thnskrg = startthn;
     var dataMerk = [];
     var dataKategori =[]; 
