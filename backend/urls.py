@@ -5,5 +5,5 @@ app_name = 'barang'
 urlpatterns = [
     path('product/', getProductList, name='product'),
     path('regional/', getRegionalList, name='regional'),
-    path('predict/<str:id>/<str:regional>', getPrediction, name='predict'),
+    path('predict/<str:id>/', getPrediction, name='predict'),
 ]

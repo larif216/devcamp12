@@ -21,3 +21,7 @@ typed-ast==1.1.0
 urllib3==1.22
 whitenoise==3.3.0
 wrapt==1.10.11
+numpy==1.11.1
+pandas==0.18.1
+scikit-learn==0.17.1
+sklearn
