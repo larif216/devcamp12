@@ -7,6 +7,9 @@ class Category(models.Model):
 class Merk(models.Model):
     name = models.CharField(max_length=50)
 
+class Regional(models.Model):
+    name = models.CharField(max_length=50)
+
 class Product(models.Model):
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
     merk_id = models.ForeignKey(Merk, on_delete=models.CASCADE)

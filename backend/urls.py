@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import *
+from .views import getProductList, getRegionalList, getPrediction
 
 app_name = 'barang'
 urlpatterns = [
     path('product/', getProductList, name='product'),
-    path('coba/', cobacoba, name='coba'),
-	# path('detail_barang/<str:id>', detail_barang, name='detail_barang'),
+    path('regional/', getRegionalList, name='regional'),
+    path('predict/<str:id>/<str:regional>', getPrediction, name='predict'),
 ]
