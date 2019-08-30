@@ -1,9 +1,10 @@
-function linegraph(namaProduct, region){
-    var starttgl = 20;
-    var startbln =12;
-    var startthn = 2019;
-    var dataInputMerk = [10,2,5,43,5,2,53,2,14,65,7,2,3,15,6,78,23,34,6,4,2,3,41,89,32,56,78,12,34,67];
-    var dataInputKategori = [15,8,4,1,35,73,5,4,53,15,6,12,7,2,1,43,89,42,23,98,65,34,67,85,35,63,67,54,76,45];
+function linegraph(product, idRegion){
+    var region = product.region[idRegion];
+    var starttgl = getDate();
+    var startbln = getMonth();
+    var startthn = getFullYear();
+    var dataInputMerk = region.time.merk;
+    var dataInputKategori = region.time.category;
     var tglskrg = starttgl;
     var blnskrg = startbln-1;
     var thnskrg = startthn;
@@ -64,7 +65,7 @@ function linegraph(namaProduct, region){
 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "Prediksi Penjualan"+ namaProduct + " di daerah " + region
+            text: "Prediksi Penjualan"+ product.name + " di daerah " + region.name
         },
         axisX: {
             valueFormatString: "DD/MM/YYYY",
