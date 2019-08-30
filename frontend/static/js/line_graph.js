@@ -1,5 +1,5 @@
 
-function linegraph(){
+function linegraph(namapruduct, regional){
     var starttgl = 20;
     var startbln =12;
     var startthn = 2019;

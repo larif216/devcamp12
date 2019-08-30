@@ -1,6 +1,5 @@
 
 function geograph(namaProduct) {
-
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
         theme: "light2", // "light1", "light2", "dark1", "dark2"
@@ -17,7 +16,7 @@ function geograph(namaProduct) {
                 { y: 169709,  label: "Jawa Timur" }
             ],
             click: function(e){
-                linegraph(e.label);
+                linegraph(namaProduct,e.label);
             }
         }
     ]
