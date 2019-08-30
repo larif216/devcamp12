@@ -36,8 +36,8 @@ def getPrediction(request, id):
 def predictLineChart(product, regional):
     delta_days =  (datetime.date.today() - product.model_time).days
 
-    filename = './backend/models/merk-' + str(product.id) + '.pkl'
-    filename2 = './backend/models/category-' + str(product.id) + '.pkl'
+    filename = './backend/models/merk-' + str(product.id) + '-' + str(regional) + '.pkl'
+    filename2 = './backend/models/category-' + str(product.id) + '-' + str(regional) + '.pkl'
 
     if (delta_days > 2) | (not os.path.isfile(filename)) | (not os.path.isfile(filename2)):
         model = createModelMerk(product, regional)
