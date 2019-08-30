@@ -2,8 +2,9 @@
 function geograph(product) {
     dataInput = [];
     for(var i = 0; i < product.region.length; i++) {
-        dataInput.push({x: product.region[i].sum, y: product.region[i].name});
+        dataInput[i] = {y: product.region[i].sum, label: product.region[i].name};
     }
+   
     $('.card').show();
     var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
@@ -17,6 +18,7 @@ function geograph(product) {
             legendText: "Region",
             dataPoints: dataInput,
             click: function(e){
+                
                 var selectedRegion = product.region.findIndex(k=> k==e.dataPoint.label);
                 linegraph(product, selectedRegion);
             }
