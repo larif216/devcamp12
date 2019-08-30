@@ -1,8 +1,9 @@
 function linegraph(product, idRegion){
     var region = product.region[idRegion];
-    var starttgl = getDate();
-    var startbln = getMonth();
-    var startthn = getFullYear();
+    var currentTime = new Date();
+    var starttgl = currentTime.getDate()
+    var startbln = currentTime.getMonth();
+    var startthn = currentTime.getFullYear();
     var dataInputMerk = region.time.merk;
     var dataInputKategori = region.time.category;
     var tglskrg = starttgl;
