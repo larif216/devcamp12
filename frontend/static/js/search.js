@@ -5,6 +5,7 @@ function getPrediction() {
         if (selectedProd == '') {
             return
         }
+        $('html').css('background', 'white');
         $.ajax({
             url: '/api/predict/' + id + '/',
             success: function (result) {
